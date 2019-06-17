@@ -2,28 +2,39 @@
 	<div class="di">
 	  <div class="header">
 	  	<a href="" class="one">Lip's</a>
-			<div class="two" >
-				<div @mouseleave="show">
-						<a href="" @mouseover="show">ysl</a>
-						<a href="" @mouseover="show">ysl</a>
-						<a href="" @mouseover="show">ysl</a>
-						<a href="" @mouseover="show">ysl</a>
-				</div>
-				<a href="">商城</a>
+		<div class="two" >
+			<div @mouseleave="show">
+					<a href="" @mouseover="show">ysl</a>
+					<a href="" @mouseover="show">ysl</a>
+					<a href="" @mouseover="show">ysl</a>
+					<a href="" @mouseover="show">ysl</a>
 			</div>
-			<a href="" class="three">ldas</a>
+			<a href="">商城</a>
+		</div>
+		<el-dropdown class="el-dropdown">
+			<span class="iconfont icon-daizi1"></span>
+			<el-dropdown-menu slot="dropdown" class="dropdown">
+			    <el-dropdown-item icon="el-icon-female">登陆</el-dropdown-item>
+			    <el-dropdown-item icon="el-icon-price-tag">个人中心</el-dropdown-item>
+			    <el-dropdown-item icon="el-icon-shopping-cart-full">购物车</el-dropdown-item>
+			</el-dropdown-menu>
+		</el-dropdown>
 	  </div>
 	  <el-collapse-transition>
         <div v-show="type">
-          <div class="transition-box" @mouseover="show" @mouseleave="show"></div>
+          <div class="transition-box" @mouseover="show" @mouseleave="show">
+          </div>
         </div>
-     </el-collapse-transition>
+    </el-collapse-transition>
   </div>
 </template>
 
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+    @import '../assets/font/one/iconfont.css'
+</style>
 <style scoped lang="less">
 .di{
 	position: relative;
@@ -64,19 +75,27 @@
 	justify-content: space-around;
 	align-items:center;
 }
-.three{
+.transition-box {
+   	top:0px;
+	width: 100%;
+	position:absolute;
+	height:300px;
+	background: #fff;
+}
+.el-dropdown{
 	width: 25%;
 	display:flex;
 	justify-content: space-around;
 	align-items:center;
+ }
+.icon-daizi1 {
+	font-size: 30px;
+    cursor: pointer;
+    color: #409EFF; 
 }
-.transition-box {
-   top:0px;
-	width: 100%;
-	position:absolute;
-	height:300px;
-	background: #f8e1e1;
-  }
+.dropdown{
+	width: 15%;
+}
 </style>
 <script>
 	export default {

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-         <vheader></vheader>
-        <!-- <MyShoppingCart></MyShoppingCart> -->
+        <vheader class="d"></vheader>
+        <MyShoppingCart></MyShoppingCart>
     </div>
 </template>
 <script>
@@ -15,7 +15,6 @@ export default {
 };
 </script>
 
-
 <style>
 *{
     margin: 0;
@@ -28,6 +27,4 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
 }
-
-
 </style>
