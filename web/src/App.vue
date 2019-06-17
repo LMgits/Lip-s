@@ -2,6 +2,7 @@
   <div id="app">
     <vheader></vheader>
   </div>
+  <!--<router-view></router-view>-->
 </template>
 
 <script>
@@ -12,7 +13,9 @@ export default {
   }
 }
 </script>
-
+<style>
+@import '~@/assets/font/one/iconfont.css'
+</style>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
