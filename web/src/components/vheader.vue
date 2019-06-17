@@ -75,7 +75,7 @@
 	width: 100%;
 	position:absolute;
 	height:300px;
-	background: #fff;
+	background: #f8e1e1;
   }
 </style>
 <script>

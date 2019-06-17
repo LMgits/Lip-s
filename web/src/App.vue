@@ -1,10 +1,9 @@
 <template>
-
     <div id="app">
-        <MyShoppingCart></MyShoppingCart>
+         <vheader></vheader>
+        <!-- <MyShoppingCart></MyShoppingCart> -->
     </div>
 </template>
-
 <script>
 import MyShoppingCart from './components/ShoppingCart.vue';
 
