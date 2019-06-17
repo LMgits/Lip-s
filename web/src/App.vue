@@ -1,4 +1,5 @@
 <template>
+
     <div id="app">
         <MyShoppingCart></MyShoppingCart>
     </div>
@@ -15,6 +16,7 @@ export default {
 };
 </script>
 
+
 <style>
 *{
     margin: 0;
@@ -27,4 +29,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
 }
+
+
 </style>

@@ -1,11 +1,6 @@
 .DS_Store
-/Mobile/node_modules
-/web/node_modules
-/Api/node_modules
-/Mobile/dist
-/web/dist
-/Api/dist
-
+node_modules
+/dist
 
 # local env files
 .env.local

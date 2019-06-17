@@ -4,6 +4,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import vheader from './components/vheader.vue'
+Vue.component('vheader',vheader)
 
 Vue.config.productionTip = false
 
