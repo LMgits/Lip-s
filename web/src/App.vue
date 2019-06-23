@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style>
+.d{
+    z-index: 3;
+}
 *{
     margin: 0;
     padding: 0;
