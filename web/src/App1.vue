@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <vheader></vheader>
+    <vheader class="header"></vheader>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -17,9 +18,6 @@ export default {
 <style>
 @import '~@/assets/font/one/iconfont.css'
 </style>
-
-
->>>>>>> d68b36866bd80786c6879db163029dd029961b33
 <style>
 *{
     margin: 0;
