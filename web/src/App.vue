@@ -4,7 +4,6 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
 import MyShoppingCart from './components/ShoppingCart.vue';
 
@@ -30,6 +29,4 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
 }
-
-
 </style>
