@@ -1,8 +1,8 @@
 <template>
-    <div id="app">
-        <vheader class="d"></vheader>
-        <MyShoppingCart></MyShoppingCart>
-    </div>
+  <div id="app">
+    <vheader class="header"></vheader>
+    <router-view></router-view>
+  </div>
 </template>
 <script>
 import MyShoppingCart from './components/ShoppingCart.vue';
@@ -14,7 +14,9 @@ export default {
     }
 };
 </script>
-
+<style>
+@import '~@/assets/font/one/iconfont.css'
+</style>
 <style>
 .d{
     z-index: 3;
