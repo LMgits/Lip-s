@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div id="car">
+        <div class="gang">Lip's 购物车</div>
         <el-table :data="tableData" border style="width: 100%" @selection-change="selected">
             <el-table-column type="selection" width="50"></el-table-column>
             <el-table-column label="商品名称" width="680">
@@ -33,7 +34,7 @@
             </el-table-column>
         </el-table>
         <br />
-        <el-button type="info" style="float: right">{{ '去结算：' + moneyTotal }}</el-button>
+        <el-button type="info" style="float: right"><router-link class='jiesuan' to='/car/balance'>{{ '去结算：' + moneyTotal }}</router-link></el-button>
         
     </div>
 </template>
@@ -153,5 +154,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-
+    #car{
+        margin-top: 80px;
+    }
+    .gang{
+        color:#fff;
+        height: 50px;
+        width: 100%;
+        background: rgb(163,11,36);
+        line-height: 50px;
+        font-size: 30px; 
+    }
+    .jiesuan{
+        text-decoration: none;
+    }
 </style>

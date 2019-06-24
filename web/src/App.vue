@@ -5,13 +5,9 @@
   </div>
 </template>
 <script>
-import MyShoppingCart from './components/ShoppingCart.vue';
 
 export default {
     name: 'app',
-    components: {
-        MyShoppingCart
-    }
 };
 </script>
 <style>
