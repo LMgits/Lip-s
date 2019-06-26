@@ -7,6 +7,7 @@ import './plugins/element.js'
 import vheader from './components/vheader.vue'
 import 'fullpage.js/vendors/scrolloverflow';
 import VueFullPage from 'vue-fullpage.js';
+
 Vue.use(VueFullPage);
 Vue.component('vheader',vheader)
 
