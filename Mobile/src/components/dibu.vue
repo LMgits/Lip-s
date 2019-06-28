@@ -7,11 +7,11 @@
             </mt-tab-item>
             <mt-tab-item id="订单">
                 <img slot="icon" src="../assets/img/qianbao.png" >
-                订单
+               <router-link to="/order" tag='a'>订单</router-link> 
             </mt-tab-item>
             <mt-tab-item id="发现">
                 <img slot="icon" src="../assets/img/gouwu.png" >
-                发现
+               <router-link to="/xiangqing" tag='a'>发现</router-link> 
             </mt-tab-item>
             <mt-tab-item id="我的">
                 <img slot="icon" src="../assets/img/youhuiquan.png" >
