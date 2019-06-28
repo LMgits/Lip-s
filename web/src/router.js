@@ -8,6 +8,7 @@ import details from './components/details.vue'
 
 
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -19,7 +20,8 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
-    },{
+    },
+    {
       path: '/index',
       name: 'index',
       component: index
@@ -44,7 +46,7 @@ export default new Router({
       name: 'details',
       component: details
     },
-   
+  
    
   ]
 
