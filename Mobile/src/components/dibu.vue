@@ -6,7 +6,7 @@
                 <router-link to="/index" tag='a'>首页</router-link>
             </mt-tab-item>
             <mt-tab-item id="订单">
-                <img slot="icon" src="../assets/img/qianbao.png" >
+                <img slot="icon" src="../assets/img/dd.png" >
                <router-link to="/order" tag='a'>订单</router-link> 
             </mt-tab-item>
             <mt-tab-item id="发现">
@@ -15,7 +15,7 @@
             </mt-tab-item>
             <mt-tab-item id="我的">
                 <img slot="icon" src="../assets/img/youhuiquan.png" >
-                我的
+                <router-link to="/my" tag='a'>我的</router-link> 
             </mt-tab-item>
         </mt-tabbar>
     </div>

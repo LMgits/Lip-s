@@ -1,22 +1,26 @@
 var express = require('express');
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/zhao',{useNewUrlParser:true},function(err){
+	if(err){
+		console.log('连接失败');
+	}else{
+		console.log('连接bbb成功')
+	}
+})
+let car_scheam   = mongoose.Schema({
+	name:String,
+})
+const Cat = mongoose.model('Cat',car_scheam);
 var router = express.Router();
-var mongoose = require('mongoose');
+router.get('/',function(req,res,next){	
+	Cat.find({},function(err, doc){ 
+	    if(err) {
+	        console.log(err.message)
+	    }else{
+	        console.log(doc)
+			res.json(doc);
+	    }})
+		
+})
+module.exports = router
 
-mongoose.connect('mongodb://localhost:27017/car', { useNewUrlParser: true }, function (err) {
-  if (err) {
-    console.log('数据库连接失败');
-  } else {
-    console.log('数据库连接成功');
-    // 监听http请求
-  }
-});
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-
-router.post('/api', function(req, res, next) {
-   res.send('respond with a resource');
-});
-
-module.exports = router;

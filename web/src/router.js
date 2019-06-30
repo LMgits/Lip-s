@@ -5,6 +5,7 @@ import Search from './components/search.vue'
 import Balance from './components/car/balance.vue'
 import index from './components/index.vue'
 import details from './components/details.vue'
+import personal from './components/personal.vue'
 
 
 
@@ -46,7 +47,11 @@ export default new Router({
       name: 'details',
       component: details
     },
-  
+  {
+    path: '/personal',
+    name: 'personal',
+    component: personal
+  },
    
   ]
 
