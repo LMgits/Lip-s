@@ -35,9 +35,6 @@
   </div>
 </template>
 
-
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
     @import '../assets/font/one/iconfont.css'
 </style>

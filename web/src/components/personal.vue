@@ -10,7 +10,6 @@
 									<span>{{ props.row.name }}</span>
 								</el-form-item>
 								<el-form-item label="填写地址">
-									<span></span>
 								</el-form-item>
 							</el-form>
 						</template>

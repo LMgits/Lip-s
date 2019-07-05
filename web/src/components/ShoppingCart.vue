@@ -141,6 +141,7 @@
 			this.zongji = this.table.length;
 		}
 	};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

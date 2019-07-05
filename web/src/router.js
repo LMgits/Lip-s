@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 import ShoppingCart from './components/ShoppingCart.vue'
+import Search from './components/search.vue'
+import Balance from './components/car/balance.vue'
 import index from './components/index.vue'
 import details from './components/details.vue'
 import login from './components/login.vue'
@@ -20,7 +21,8 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
-    },{
+    },
+    {
       path: '/index',
       name: 'index',
       component: index
