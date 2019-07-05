@@ -3,20 +3,18 @@
 		<span>Lip's 直营店</span>
 		<div class="con">
 			<div class="nei">
-				<img src="" alt="" />
+				<img :src="gs[0].src" alt="" />
 				<div class="xiang">
 					<i>唇秘——女人嘴唇的秘密</i>
-					<span>圣罗兰系列</span>
-					<s>价格：$500.00</s>
-					<el-select placeholder="请选择口红颜色">
-    					<el-option v-for="item in color" :key="item.value" :label="item.label" :value="item.value" id="puo"></el-option>
-  					</el-select>
-  					<el-select placeholder="请选择口红盖子">
-    					<el-option v-for="item in box" :key="item.value" :label="item.label" :value="item.value" id="put"></el-option>
+					<span>{{gs[0].series}}系列</span>
+					<p>{{gs[0].name}}</p>
+					<s>价格：${{gs[0].price}}.00</s>
+  					<el-select v-model="valuet" placeholder="请选择口红颜色">
+    					<el-option v-for="item in corol" :key="item.value" :label="item.label" :value="item.value" id="put"></el-option>
   					</el-select>
   					<div>
-  						<el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字" id="num"></el-input-number>
-    					<el-button type="primary" id="bt">加入购物车</el-button>
+  						<el-input-number v-model="num" :min="1" :max="10" label="描述文字" id="num"></el-input-number>
+    					<el-button type="primary" id="bt" @click="tijiao(gs[0].name)">加入购物车</el-button>
   					</div>
 				</div>
 			</div>
@@ -28,24 +26,13 @@
 export default {
     data() {
       return {
+      	lala:'',
+      	gs:[],
+      	id:'',
       	num: 1,
-        color: [{
-          value: '选项1',
-          label: '黄金糕'
-        }, {
-          value: '选项2',
-          label: '双皮奶'
-        }, {
-          value: '选项3',
-          label: '蚵仔煎'
-        }, {
-          value: '选项4',
-          label: '龙须面'
-        }, {
-          value: '选项5',
-          label: '北京烤鸭'
-        }],
-        box: [{
+      	valueo:'',
+      	valuet:'',
+        corol: [{
           value: '选项1',
           label: '黄金糕'
         }, {
@@ -62,7 +49,39 @@ export default {
           label: '北京烤鸭'
         }],
       }
-    }
+    },
+    methods:{
+    	tijiao(names){
+    		if(this.GLOBAL.hasEnter){
+	    		let params = new URLSearchParams();
+	    		params.append('shu',this.GLOBAL.hasName);
+	    		params.append('img',this.lala);
+	    		params.append('name',names);
+	    		params.append('jiage',this.gs[0].price);
+	    		params.append('shuliang',this.num);
+	    		params.append('type','false');
+	    		var self = this;
+	    		axios.post('/tianjia',params).then(function (response) {
+					alert('添加成功!')
+					self.$router.push({name:'index'});
+	  			})
+    		}else{
+    			alert('请先登录！')
+    		}
+    	}
+    },
+    created(){
+       var routerParams = this.$route.params.id
+        this.id = routerParams;
+      	let params = new URLSearchParams();
+      	var self = this;
+        params.append('usrename',this.id)
+		axios.post('/xiangqing',params).then(function (response) {
+			self.lala = response.data[0].src;
+			response.data[0].src = require(`../${response.data[0].src}`)
+			self.gs = response.data;
+  		})
+    },
   }
 </script>
 

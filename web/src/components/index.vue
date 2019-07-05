@@ -16,7 +16,7 @@
                 		<div class="block">
 						    <el-carousel>
 						      <el-carousel-item v-for="item in newproduct">
-						        <img :src="item.src"></img>
+						        <img :src="item.src" class="img"></img>
 						      </el-carousel-item>
 						    </el-carousel>
 						</div>
@@ -31,7 +31,7 @@
 							<el-input type="textarea" v-model="form.desc" class="input"></el-input>
 					  	</el-form-item>
 					  	<el-form-item>
-						    <el-button type="primary" @click="onSubmit">发送</el-button>
+						    <el-button type="primary" >发送</el-button>
 					  	</el-form-item>
 					</el-form>
                 </div>
@@ -55,10 +55,10 @@ export default{
                 // anchors: ['page1', 'page2', 'page3'],
             },
             newproduct:[
-            	{src:'../assets/img/L-pko.jpg'},
-            	{src:'../src/assets/img/L-pkt.jpg'},
-            	{src:'../src/assets/img/L-pktr.jpg'},
-            	{src:'../src/assets/img/L-pkf.jpg'}
+            	{src:require('../assets/img/L-pko.jpg')},
+            	{src:require('../assets/img/L-pkt.jpg')},
+            	{src:require('../assets/img/L-pktr.jpg')},
+            	{src:require('../assets/img/L-pkf.jpg')}
             	
             ],
             form: {
@@ -72,7 +72,7 @@ export default{
 	          desc: ''
 	        }
         }
-    }
+    },
 }
 </script>
 
@@ -145,5 +145,9 @@ export default{
 }
 .input>textarea:focus{
     border:1px solid #f99;
+}
+.img{
+	width: 35%;
+	height: 100%;
 }
 </style>
