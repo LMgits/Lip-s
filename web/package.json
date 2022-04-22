@@ -10,7 +10,7 @@
     "core-js": "^3.1.4",
     "core.js": "^0.4.2",
     "element-ui": "^2.9.2",
-    "fullpage.js": "^3.0.5",
+    "fullpage.js": "^4.0.5",
     "vue": "^2.6.10",
     "vue-fullpage": "^2.0.5",
     "vue-fullpage.js": "^0.1.3",
